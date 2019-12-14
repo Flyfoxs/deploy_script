@@ -35,3 +35,6 @@ output
 *.gz
 *.out
 *.log
+
+
+__*__
