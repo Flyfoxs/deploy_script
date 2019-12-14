@@ -36,5 +36,7 @@ torchvision==0.4.1
 tqdm==4.36.1
 
 
+#####
+pymongo
 
 # -i  https://mirrors.aliyun.com/pypi/simple/
