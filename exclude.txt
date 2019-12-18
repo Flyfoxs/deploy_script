@@ -32,7 +32,7 @@ score
 **/*.dat
 
 **/*remote.ipynb
-**/*checkpoint*
+
 
 
 
