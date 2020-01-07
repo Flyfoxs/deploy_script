@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 cd "$(dirname "$0")"
 
+conf_path="$(dirname "$0")"
+
 if [[ -z "$1" ]]; then
   remote_host="felix@dgx"
 else
@@ -12,8 +14,8 @@ remote_dir="~/"
 cd ..
 
 if [[ -z "$2" ]]; then
-    echo rsync -avz --no-links --exclude-from './bin/exclude.txt' $(pwd) $remote_host:$remote_dir
-    rsync -avz --no-links --exclude-from './bin/exclude.txt' $(pwd) $remote_host:$remote_dir
+    echo rsync -avz --no-links --exclude-from "${conf_path}/exclude.txt" $(pwd) $remote_host:$remote_dir
+    rsync -avz --no-links --exclude-from "${conf_path}/exclude.txt" $(pwd) $remote_host:$remote_dir
 else
     rsync -avz --no-links $(pwd) $remote_host:$remote_dir
 fi
