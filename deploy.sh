@@ -3,13 +3,15 @@ cd "$(dirname "$0")"
 
 conf_path="$(dirname "$0")"
 
+remote_dir="~/"
 if [[ -z "$1" ]]; then
-  remote_host="felix@dgx"
+  remote_host="felix@iiat7"
+  remote_dir="/share/felix/pj"
 else
   remote_host="felix@$1"
 fi
 #
-remote_dir="~/"
+
 
 cd ..
 
@@ -17,7 +19,8 @@ if [[ -z "$2" ]]; then
     echo rsync -avz --no-links --exclude-from "${conf_path}/exclude.txt" $(pwd) $remote_host:$remote_dir
     rsync -avz --no-links --exclude-from "${conf_path}/exclude.txt" $(pwd) $remote_host:$remote_dir
 else
-    rsync -avz --no-links $(pwd) $remote_host:$remote_dir
+    #rsync -avz --no-links $(pwd) $remote_host:$remote_dir
+    echo 'cancel'
 fi
 
 date

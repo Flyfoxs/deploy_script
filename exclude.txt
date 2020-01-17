@@ -17,6 +17,7 @@
 **/.ipynb_checkpoints
 **/log
 **/logs
+**/notebook
 **/nohup.out
 **/*.log
 
