@@ -19,7 +19,7 @@ echo "${conf_path}/exclude.txt"
 mkdir output
 
 if [[ -z "$2" ]]; then
-    rsync -avz --exclude-from "${conf_path}/exclude.txt" --max-size=1m  $remote_host:$remote_dir  ./ 
+    #rsync -avz --exclude-from "${conf_path}/exclude.txt" --max-size=1m  $remote_host:$remote_dir  ./
 
     rsync -avz  $remote_host:$remote_dir/notebook/*.ipynb  ./notebook/
 
