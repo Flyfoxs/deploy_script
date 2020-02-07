@@ -44,5 +44,8 @@ ipdb
 sacred
 file_cache
 task_distribute==0.1.9
+
+imgaug==0.2.7
+
 # -i  https://mirrors.aliyun.com/pypi/simple/
 

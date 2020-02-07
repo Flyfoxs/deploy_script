@@ -12,8 +12,8 @@ remote_dir="~/"
 cd ..
 
 if [[ -z "$2" ]]; then
-    echo rsync -avz --no-links --exclude-from './bin/exclude.txt' $(pwd) $remote_host:$remote_dir
-    rsync -avz --no-links --exclude-from './bin/exclude.txt' $(pwd) $remote_host:$remote_dir
+    echo rsync -avz  $(pwd) $remote_host:$remote_dir
+         rsync -avz  $(pwd) $remote_host:$remote_dir
 else
     rsync -avz --no-links $(pwd) $remote_host:$remote_dir
 fi
