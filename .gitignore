@@ -37,5 +37,6 @@ output
 *.out
 *.log
 
+.ipynb_checkpoints
 
 __*__
