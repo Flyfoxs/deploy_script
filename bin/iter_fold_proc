@@ -1,0 +1,2 @@
+# 多个文件夹中的小文件 "快速" merge 到一个文件夹
+find  /root/lilao/del/src/*  -mindepth 0 -type  d  -print  | xargs -n 1 -I {} bash -c " cd  {}  && tar  -cvf - . | tar -xvf - -C /root/lilao/del/des && echo {}  "
